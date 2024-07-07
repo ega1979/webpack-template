@@ -2,8 +2,9 @@
   "name": "default",
   "scripts": {
     "dev": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack serve --mode development",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack serve --mode development --watch",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production",
+    "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
@@ -17,8 +18,12 @@
     "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
   }
 }
